@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title> ADD_APP_BY_sneha</title>
+		<style>
+		*{text-align:center;
+			font-size:40px;
+			background-color:#ffcccc;}
+
+		</style>
+			
+	</head>
+	<body>
+		<h1> ADDITION APP</h1>
+		<form onsubmit="find()">
+			<input type = "number" step="any" id ="n1" placeholder="enter first number"/><br/><br/>
+			<input type = "number" step="any" id ="n2" placeholder="enter second number" /><br/><br/>
+			<input type ="submit" value="ADD"/>
+		</form>
+<h2 id ="msg"/>
+		 
+	<script>
+		event.preventDefault();
+		function find()
+		{
+			event.preventDefault();
+			let n1 = document.getElementById("n1");
+			let n2 = document.getElementById("n2");
+			if(n1.value==="")
+			{
+				alert("enter 1st number");
+				n1.focus();
+				msg.innerHTML="";
+				return;
+			}
+			if(n2.value==="")
+			{
+				alert("enter 2nd number");
+				n2.focus();
+				msg.innerHTML="";
+				return;
+
+			}
+
+			let num1 = parseFloat(n1.value);
+			let num2 = parseFloat(n2.value);
+			let result = num1+num2;
+			msg.innerHTML="result of addition="+result;	
+	}
+	</script>
+	</body>
+
+</html>
